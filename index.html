@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-layout" aria-label="테트리스 게임">
+      <canvas id="game-board" width="300" height="600" tabindex="0" aria-label="테트리스 게임 보드">
+        테트리스 게임 보드입니다. 캔버스를 지원하는 브라우저에서 열어주세요.
+      </canvas>
+      <aside class="score-panel" aria-labelledby="score-heading">
+        <h1 id="score-heading">점수</h1>
+        <p id="score" class="score-value">0</p>
+        <h2 class="stat-heading">레벨</h2>
+        <p id="level" class="level-value">1</p>
+        <h2 id="next-heading" class="stat-heading">다음 블록</h2>
+        <canvas id="next-board" width="120" height="120" aria-labelledby="next-heading">
+          다음에 등장할 블록의 미리보기입니다.
+        </canvas>
+        <p id="game-over" class="game-over" role="status" hidden>게임오버</p>
+        <button id="restart-button" class="restart-button" type="button">다시 시작</button>
+      </aside>
+    </main>
+  </body>
+</html>

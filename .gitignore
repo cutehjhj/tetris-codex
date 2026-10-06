@@ -1,0 +1,34 @@
+# OS에서 생성하는 메타파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 에디터의 임시·백업·개인 작업 상태 파일
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+*.bak
+.~lock.*#
+~$*
+.history/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+*.sublime-workspace
+.vscode/*.log
+
+# 로컬 테스트 의존성 및 생성 결과물
+node_modules/
+test-results/
+playwright-report/
+coverage/
+*.log

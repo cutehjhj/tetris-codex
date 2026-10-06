@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eceff3;
+  color: #202938;
+  font-family: Arial, "Malgun Gothic", sans-serif;
+}
+
+.game-layout {
+  width: min(100%, 464px);
+  display: grid;
+  grid-template-columns: minmax(0, 300px) 140px;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+#game-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 2;
+  background: #000;
+}
+
+.score-panel {
+  min-width: 0;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+#game-board:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.score-panel h1 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.score-value {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stat-heading {
+  margin: 20px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.level-value {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#next-board {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 1;
+  background: #000;
+}
+
+/* 캔버스 내부 해상도는 유지하고 표시 크기만 줄여 게임 좌표가 바뀌지 않게 합니다. */
+@media (max-width: 520px) {
+  body {
+    padding: 12px;
+  }
+
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 108px;
+    gap: 12px;
+  }
+
+  .score-panel {
+    padding: 12px;
+  }
+
+  .score-value {
+    font-size: 26px;
+  }
+}
+
+.game-over {
+  margin: 20px 0 0;
+  color: #b91c1c;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.restart-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 4px;
+  border: none;
+  border-radius: 4px;
+  background: #202938;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background: #374151;
+}
+
+.restart-button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
